@@ -1,8 +1,4 @@
-$(window).resize(function () {
-    paddingFirst();
-    autoHeight();
-    overlayWeight();
-});
+
 $(document).ready(function () {
     paddingFirst();
     autoHeight();
