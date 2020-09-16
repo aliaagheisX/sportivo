@@ -5,11 +5,15 @@ $(window).on('load', function() {
     $('.spinner4').fadeOut(); 
     $('.fakeLoader').delay(50).fadeOut(100); 
     $('body').delay(50).css({'overflow':'visible'});
+    console.log('load');
 });
 
 
 
 $(document).ready(function () {
+    
+    console.log('ready');
+    
     /*first section padding with heading*/
     if ( $(window).width() >= 992 ) {
 
