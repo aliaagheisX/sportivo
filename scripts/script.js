@@ -1,9 +1,4 @@
 
-$(document).ready(function () {
-    paddingFirst();
-    autoHeight();
-    overlayWeight();
-});
 
 
 $(window).on('load', function() { 
@@ -46,3 +41,16 @@ function overlayWeight() {
     var width = $('.fourth .row img').width();
     $('.fourth .overlay').css('width', width);
 }
+
+
+$(document).ready(function () {
+    paddingFirst();
+    autoHeight();
+    overlayWeight();
+});
+
+$(window).resize(function () {
+    paddingFirst();
+    autoHeight();
+    overlayWeight();
+});
