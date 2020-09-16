@@ -10,6 +10,12 @@ $(document).ready(function () {
 });
 
 
+$(window).on('load', function() { 
+    $('.spinner4').fadeOut(); 
+    $('.fakeLoader').delay(50).fadeOut(100); 
+    $('body').delay(50).css({'overflow':'visible'});
+});
+
 function paddingFirst() {
     if ( $(window).width() >= 992 ) {
 
