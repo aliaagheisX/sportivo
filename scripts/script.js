@@ -10,48 +10,41 @@ $(window).on('load', function() {
 
 
 $(document).ready(function () {
-    function paddingFirst() {
-        if ( $(window).width() >= 992 ) {
+    /*first section padding with heading*/
+    if ( $(window).width() >= 992 ) {
 
-            var padding = $( window ).height() - $('.human').height();
+        var padding = $( window ).height() - $('.human').height();
 
-            $('.first').css('paddingTop', padding);
-            $('.firstRow').css('marginTop', -padding);
-        }
+        $('.first').css('paddingTop', padding);
+        $('.firstRow').css('marginTop', -padding);
     }
+    /*first section padding with heading*/
+    
+    
+    /*manage that the height and the width of third section images be the same*/
+    if ( $(window).width() >= 576 ) {
+        
+        $('.third .row img:not(.widthImage)').css('width', 'auto');
+        
+        var height = $(".heightImage").height();
+        $('.third .row img:not(.heightImage)').css('height', height);
+    } 
+    else {
+        $('.third .row img:not(.heightImage)').css('height', 'auto');
+        
+        var width = $(".widthImage").width();
+        $('.third .row img:not(.widthImage)').css('width', width);
+        
+        
 
-    function autoHeight () {
-        if ( $(window).width() >= 576 ) {
-
-            $('.third .row img:not(.widthImage)').css('width', 'auto');
-
-            var height = $(".heightImage").height();
-            $('.third .row img:not(.heightImage)').css('height', height);
-        } 
-        else {
-            $('.third .row img:not(.heightImage)').css('height', 'auto');
-
-            var width = $(".widthImage").width();
-            $('.third .row img:not(.widthImage)').css('width', width);
-
-
-
-        }
     }
+    /*manage that the height and the width of third section images be the same*/
 
-
-    function overlayWeight() {
-        var width = $('.fourth .row img').width();
-        $('.fourth .overlay').css('width', width);
-    }
-
-    paddingFirst();
-    autoHeight();
-    overlayWeight();
+    
+    /*the description bar equal to the image width*/
+    var widthFourth = $('.fourth .row img').width();
+    $('.fourth .overlay').css('width', widthFourth);
+    /*the description bar equal to the image width*/
 });
 
-$(window).resize(function () {
-    paddingFirst();
-    autoHeight();
-    overlayWeight();
-});
+
